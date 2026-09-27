@@ -1,0 +1,109 @@
+[
+  {
+    "name": "ui-login",
+    "path": "evidence/report-v2/ui-login.png",
+    "text": "Account role Customer \u00b7 Amani Perera Demo password Sign in \u2192",
+    "caption": "Account role and sign in form",
+    "type": "ui"
+  },
+  {
+    "name": "ui-balance",
+    "path": "evidence/report-v2/ui-balance.png",
+    "text": "Outstanding balance\nLKR\n4,114.00\n\nDue 2026-10-15\n\nDemo bill",
+    "caption": "Current balance returned by the payment service",
+    "type": "ui"
+  },
+  {
+    "name": "ui-payment",
+    "path": "evidence/report-v2/ui-payment.png",
+    "text": "Amount in LKR 12.50\nPayment reference REPORT-1790431400819\nA unique reference protects against duplicate payments. Keep it unchanged when retrying.\nRecord demo payment\n\u2192",
+    "caption": "Customer payment form with amount and reference",
+    "type": "ui"
+  },
+  {
+    "name": "ui-receipt",
+    "path": "evidence/report-v2/ui-receipt.png",
+    "text": "New receipt 4eae33723bdc48d0a41c02f9426e7c1b \u00b7 LKR 12.50",
+    "caption": "Receipt returned after the demonstration payment",
+    "type": "ui"
+  },
+  {
+    "name": "ui-updated-balance",
+    "path": "evidence/report-v2/ui-updated-balance.png",
+    "text": "Outstanding balance\nLKR\n4,101.50\n\nDue 2026-10-15\n\nDemo bill",
+    "caption": "Updated balance after the payment",
+    "type": "ui"
+  },
+  {
+    "name": "ui-operator",
+    "path": "evidence/report-v2/ui-operator.png",
+    "text": "New cumulative reading in m\u00b3\nReading time yyyy-mm-dd, --:-- --\nSave meter reading",
+    "caption": "Operator form for a cumulative meter reading",
+    "type": "ui"
+  },
+  {
+    "name": "ui-meter",
+    "path": "evidence/report-v2/ui-meter.png",
+    "text": "1260.000 m\u00b3\n26 Sept 2026, 19:23\n1258.000 m\u00b3\n25 Sept 2026, 14:30\n1240.000 m\u00b3\n25 Aug 2026, 14:30",
+    "caption": "Latest recorded meter values and timestamps",
+    "type": "ui"
+  },
+  {
+    "name": "ui-partner",
+    "path": "evidence/report-v2/ui-partner.png",
+    "text": "Account number 100000001\nOpen account",
+    "caption": "Partner account lookup uses the same service",
+    "type": "ui"
+  },
+  {
+    "name": "code-validation",
+    "file": "src/Water.Shared/Domain.cs",
+    "start": 12,
+    "end": 18,
+    "caption": "Money validation in the shared library",
+    "path": "evidence/report-v2/code-validation.png",
+    "text": "Water.Shared/Domain.cs\n12\n    public static long Cents(decimal amount)\n13\n    {\n14\n        if (amount <= 0 || amount > 1_000_000 || decimal.Round(amount, 2) != amount)\n15\n            throw new DomainException(400, \"Enter an amount between LKR 0.01 and 1,000,000 with at most two decimal places.\");\n16\n        return checked((long)(amount * 100));\n17\n    }\n18\nExact source lines 12 to 18",
+    "rawSource": "    public static long Cents(decimal amount)\n    {\n        if (amount <= 0 || amount > 1_000_000 || decimal.Round(amount, 2) != amount)\n            throw new DomainException(400, \"Enter an amount between LKR 0.01 and 1,000,000 with at most two decimal places.\");\n        return checked((long)(amount * 100));\n    }\n",
+    "type": "code"
+  },
+  {
+    "name": "code-retry",
+    "file": "src/Water.Payments/PaymentRepository.cs",
+    "start": 49,
+    "end": 55,
+    "caption": "Returning a receipt when a request is repeated",
+    "path": "evidence/report-v2/code-retry.png",
+    "text": "Water.Payments/PaymentRepository.cs\n49\n            if (reader.Read())\n50\n            {\n51\n                var existing = Read(reader);\n52\n                if (existing.AccountId != request.AccountId || existing.Amount != request.Amount)\n53\n                    throw new DomainException(409, \"This reference was already used for a different payment.\");\n54\n                return (existing, true);\n55\n            }\nExact source lines 49 to 55",
+    "rawSource": "            if (reader.Read())\n            {\n                var existing = Read(reader);\n                if (existing.AccountId != request.AccountId || existing.Amount != request.Amount)\n                    throw new DomainException(409, \"This reference was already used for a different payment.\");\n                return (existing, true);\n            }",
+    "type": "code"
+  },
+  {
+    "name": "code-endpoint",
+    "file": "src/Water.Payments/Program.cs",
+    "start": 23,
+    "end": 28,
+    "caption": "Payment endpoint checks access before recording",
+    "path": "evidence/report-v2/code-endpoint.png",
+    "text": "Water.Payments/Program.cs\n23\napp.MapPost(\"/api/v1/payments\", (PaymentRequest request, HttpContext context, IPaymentRepository store) => {\n24\n    if (context.User.IsInRole(\"operator\")) throw new DomainException(403, \"Operators cannot record payments.\");\n25\n    ServiceSecurity.Allow(context.User, request.AccountId);\n26\n    var result = store.Record(request, context.User.Identity!.Name!);\n27\n    return Results.Json(new { receipt = result.Receipt, replay = result.Replay }, statusCode: result.Replay ? 200 : 201);\n28\n});\nExact source lines 23 to 28",
+    "rawSource": "app.MapPost(\"/api/v1/payments\", (PaymentRequest request, HttpContext context, IPaymentRepository store) => {\n    if (context.User.IsInRole(\"operator\")) throw new DomainException(403, \"Operators cannot record payments.\");\n    ServiceSecurity.Allow(context.User, request.AccountId);\n    var result = store.Record(request, context.User.Identity!.Name!);\n    return Results.Json(new { receipt = result.Receipt, replay = result.Replay }, statusCode: result.Replay ? 200 : 201);\n});",
+    "type": "code"
+  },
+  {
+    "name": "code-client",
+    "file": "src/Water.Desktop/PaymentClient.cs",
+    "start": 14,
+    "end": 15,
+    "caption": "The desktop client calls the shared HTTP service",
+    "path": "evidence/report-v2/code-client.png",
+    "text": "Water.Desktop/PaymentClient.cs\n14\n    public async Task<Balance> GetBalance(string account) => await Read<Balance>(await client.GetAsync($\"/api/v1/accounts/{Uri.EscapeDataString(account)}/balance\"));\n15\n    public async Task<PaymentResult> Pay(PaymentRequest request) => await Read<PaymentResult>(await client.PostAsJsonAsync(\"/api/v1/payments\", request));\nExact source lines 14 to 15",
+    "rawSource": "    public async Task<Balance> GetBalance(string account) => await Read<Balance>(await client.GetAsync($\"/api/v1/accounts/{Uri.EscapeDataString(account)}/balance\"));\n    public async Task<PaymentResult> Pay(PaymentRequest request) => await Read<PaymentResult>(await client.PostAsJsonAsync(\"/api/v1/payments\", request));",
+    "type": "code"
+  },
+  {
+    "name": "build-output",
+    "path": "evidence/report-v2/build-output.png",
+    "text": "Build succeeded.\n    0 Warning(s)\n    0 Error(s)",
+    "caption": "Recorded solution build output",
+    "type": "output"
+  }
+]

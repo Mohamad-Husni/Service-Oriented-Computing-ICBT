@@ -1,0 +1,14 @@
+{
+  "body_words": 3187,
+  "body_without_figure_text": 2705,
+  "paragraphs_headings_captions": 2443,
+  "figure_text_including_source_and_ui": 482,
+  "tables": 262,
+  "excludes": "cover contents figure list conclusion bibliography",
+  "method": "whitespace separated words; text in each included screenshot and diagram counted once",
+  "figures": 16,
+  "code_screenshots": 4,
+  "ui_screenshots": 7,
+  "diagrams": 4,
+  "build_output_screenshots": 1
+}

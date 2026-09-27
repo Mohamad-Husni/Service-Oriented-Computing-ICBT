@@ -1,0 +1,20 @@
+flowchart LR
+    C["Customer"]
+    P["Payment partner"]
+    O["Meter operator"]
+    subgraph WaterLink["WaterLink key use cases"]
+        B(["View balance"])
+        Pay(["Record payment"])
+        H(["View payment history"])
+        U(["View recorded usage"])
+        R(["Add meter reading"])
+    end
+    C --- B
+    C --- Pay
+    C --- H
+    C --- U
+    P --- B
+    P --- Pay
+    P --- H
+    O --- U
+    O --- R

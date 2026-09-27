@@ -1,0 +1,26 @@
+erDiagram
+    Accounts ||--|{ Readings : has
+    Bills ||--o{ Payments : receives
+    Accounts {
+        string Id PK
+    }
+    Readings {
+        int Id PK
+        string AccountId FK
+        long MilliUnits
+        string RecordedAt
+        string RecordedBy
+    }
+    Bills {
+        string AccountId PK
+        long AmountCents
+        string DueDate
+    }
+    Payments {
+        string Id PK
+        string AccountId FK
+        long AmountCents
+        string Reference
+        string Channel
+        string RecordedAt
+    }

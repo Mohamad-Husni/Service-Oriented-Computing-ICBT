@@ -1,0 +1,503 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "WaterLink services",
+    "version": "1.0.0",
+    "description": "Independent usage and payment hosts. Fictional demonstration data."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:5102",
+      "description": "Payments"
+    },
+    {
+      "url": "http://127.0.0.1:5101",
+      "description": "Usage"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/api/v1/payments": {
+      "post": {
+        "summary": "Record a payment or replay its receipt",
+        "servers": [
+          {
+            "url": "http://127.0.0.1:5102"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response or matching replay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Business conflict"
+          },
+          "500": {
+            "description": "Service error"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentResult"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/accounts/{account}/balance": {
+      "get": {
+        "summary": "Read current balance",
+        "servers": [
+          {
+            "url": "http://127.0.0.1:5102"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response or matching replay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Balance"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Business conflict"
+          },
+          "500": {
+            "description": "Service error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/accounts/{account}/payments": {
+      "get": {
+        "summary": "Read latest 100 permitted receipts",
+        "servers": [
+          {
+            "url": "http://127.0.0.1:5102"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response or matching replay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Receipt"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Business conflict"
+          },
+          "500": {
+            "description": "Service error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/accounts/{account}/usage": {
+      "get": {
+        "summary": "Read latest 12 readings and consumption",
+        "servers": [
+          {
+            "url": "http://127.0.0.1:5101"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response or matching replay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsageSummary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Business conflict"
+          },
+          "500": {
+            "description": "Service error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/accounts/{account}/readings": {
+      "post": {
+        "summary": "Operator records cumulative reading",
+        "servers": [
+          {
+            "url": "http://127.0.0.1:5101"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response or matching replay",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsageSummary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Business conflict"
+          },
+          "500": {
+            "description": "Service error"
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsageSummary"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadingRequest"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "account",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    },
+    "schemas": {
+      "PaymentRequest": {
+        "type": "object",
+        "required": [
+          "accountId",
+          "amount",
+          "reference"
+        ],
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0.01,
+            "maximum": 1000000,
+            "multipleOf": 0.01
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 80,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          }
+        }
+      },
+      "ReadingRequest": {
+        "type": "object",
+        "required": [
+          "meterValue",
+          "recordedAt"
+        ],
+        "properties": {
+          "meterValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10000000,
+            "multipleOf": 0.001
+          },
+          "recordedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Receipt": {
+        "type": "object",
+        "required": [
+          "id",
+          "accountId",
+          "amount",
+          "reference",
+          "channel",
+          "recordedAt"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "accountId": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "channel": {
+            "type": "string"
+          },
+          "recordedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Balance": {
+        "type": "object",
+        "required": [
+          "accountId",
+          "billed",
+          "paid",
+          "outstanding",
+          "dueDate",
+          "asOf"
+        ],
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "billed": {
+            "type": "number"
+          },
+          "paid": {
+            "type": "number"
+          },
+          "outstanding": {
+            "type": "number"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "asOf": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "PaymentResult": {
+        "type": "object",
+        "required": [
+          "receipt",
+          "replay"
+        ],
+        "properties": {
+          "receipt": {
+            "$ref": "#/components/schemas/Receipt"
+          },
+          "replay": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MeterReading": {
+        "type": "object",
+        "required": [
+          "id",
+          "meterValue",
+          "recordedAt",
+          "recordedBy"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "meterValue": {
+            "type": "number"
+          },
+          "recordedAt": {
+            "type": "string"
+          },
+          "recordedBy": {
+            "type": "string"
+          }
+        }
+      },
+      "UsageSummary": {
+        "type": "object",
+        "required": [
+          "accountId",
+          "customerName",
+          "address",
+          "consumption",
+          "unit",
+          "asOf",
+          "readings"
+        ],
+        "properties": {
+          "accountId": {
+            "type": "string"
+          },
+          "customerName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "consumption": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "asOf": {
+            "type": "string"
+          },
+          "readings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeterReading"
+            }
+          }
+        }
+      }
+    }
+  }
+}

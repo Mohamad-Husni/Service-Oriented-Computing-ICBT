@@ -1,0 +1,18 @@
+{
+  "architecture": {
+    "path": "/Users/husni/Documents/ChatGPT/4th sem husni SOC/docs/diagrams/v2/architecture.png",
+    "text": "Web browser Customer partner and operator Desktop partner client Water.Desktop Web host and gateway Water.Portal Usage API Water.Usage Payment API Water.Payments Usage SQLite database Payment SQLite database HTTP and cookie HTTP JSON HTTP JSON HTTP JSON"
+  },
+  "use-case": {
+    "path": "/Users/husni/Documents/ChatGPT/4th sem husni SOC/docs/diagrams/v2/use-case.png",
+    "text": "WaterLink key use cases Customer Partner Operator View balance Record payment View payment history View recorded usage Add meter reading Access is checked before each service action. Customers use their own account. Partners see their own receipts."
+  },
+  "class": {
+    "path": "/Users/husni/Documents/ChatGPT/4th sem husni SOC/docs/diagrams/v2/class.png",
+    "text": "PaymentClient - client : HttpClient + GetBalance(account) + Pay(request) <<interface>> IPaymentRepository + Balance(account) + History(account, channel) + Record(request, channel) PaymentRepository database : Database + Balance(account) + History(account, channel) + Record(request, channel) PaymentRequest + AccountId : string + Amount : decimal + Reference : string Database + Open() + Initialize(sql) implements uses sends reads Selected classes and members The client reaches the repository through the HTTP API only. The same repository interface is used by the payment API host."
+  },
+  "sequence": {
+    "path": "/Users/husni/Documents/ChatGPT/4th sem husni SOC/docs/diagrams/v2/sequence.png",
+    "text": "Client Payment API Repository Database POST payment Check identity and account Record(request) Begin transaction Find reference Existing or new alt [matching retry] Original receipt 200 replay [new reference] Read balance Available amount break [exceeds balance] rollback and return 409 Insert and commit Saved New receipt 201 created GET balance A changed payload with an existing reference returns 409."
+  }
+}

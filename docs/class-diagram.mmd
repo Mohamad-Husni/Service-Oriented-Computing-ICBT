@@ -1,0 +1,32 @@
+classDiagram
+class PaymentClient {
+  -HttpClient client
+  +GetBalance(account)
+  +Pay(request)
+}
+class PaymentRequest {
+  +string AccountId
+  +decimal Amount
+  +string Reference
+}
+class IPaymentRepository {
+  <<interface>>
+  +Balance(account)
+  +History(account, channel)
+  +Record(request, channel)
+}
+class PaymentRepository {
+  Database database
+  +Balance(account)
+  +History(account, channel)
+  +Record(request, channel)
+}
+class Database {
+  +Open()
+  +Initialize(sql)
+}
+PaymentClient ..> PaymentRequest : sends through HTTP
+PaymentRepository ..> PaymentRequest : reads
+PaymentRepository ..|> IPaymentRepository
+PaymentRepository --> Database : uses
+note for PaymentClient "Calls the HTTP API, not the repository directly"

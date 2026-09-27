@@ -1,0 +1,13 @@
+  Water.Shared -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Shared/bin/Debug/net10.0/Water.Shared.dll
+  Water.Usage -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Usage/bin/Debug/net10.0/Water.Usage.dll
+  Water.Contracts -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Contracts/bin/Debug/net10.0/Water.Contracts.dll
+  Water.Payments -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Payments/bin/Debug/net10.0/Water.Payments.dll
+  Water.Portal -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/bin/Debug/net10.0/Water.Portal.dll
+  Water.UnitTests -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/tests/Water.UnitTests/bin/Debug/net10.0/Water.UnitTests.dll
+  Water.Desktop -> /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Desktop/bin/Debug/net10.0/Water.Desktop.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:21.33

@@ -1,0 +1,41 @@
+# Local container demonstration. Provision real secrets and TLS before external deployment.
+x-auth: &auth
+  CUSTOMER_TOKEN: ${CUSTOMER_TOKEN:?Set CUSTOMER_TOKEN}
+  CUSTOMER2_TOKEN: ${CUSTOMER2_TOKEN:?Set CUSTOMER2_TOKEN}
+  PARTNER_TOKEN: ${PARTNER_TOKEN:?Set PARTNER_TOKEN}
+  OPERATOR_TOKEN: ${OPERATOR_TOKEN:?Set OPERATOR_TOKEN}
+services:
+  usage:
+    build:
+      context: .
+      args: {SERVICE: Usage}
+    environment:
+      <<: *auth
+      DATA_PATH: /app/data/usage.db
+    volumes: [usage-data:/app/data]
+    restart: unless-stopped
+  payments:
+    build:
+      context: .
+      args: {SERVICE: Payments}
+    environment:
+      <<: *auth
+      DATA_PATH: /app/data/payments.db
+    volumes: [payments-data:/app/data]
+    restart: unless-stopped
+  portal:
+    build:
+      context: .
+      args: {SERVICE: Portal}
+    environment:
+      <<: *auth
+      DEMO_PASSWORD: ${DEMO_PASSWORD:?Set DEMO_PASSWORD}
+      ASPNETCORE_ENVIRONMENT: Development
+      USAGE_URL: http://usage:8080
+      PAYMENTS_URL: http://payments:8080
+    ports: ["127.0.0.1:5100:8080"]
+    depends_on: [usage, payments]
+    restart: unless-stopped
+volumes:
+  usage-data:
+  payments-data:

@@ -1,0 +1,907 @@
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[62]
+      User profile is available. Using '/Users/husni/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5200
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 11.2902ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 2.2812ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 2.2976ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 5.5374ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 42
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Http.Result.UnauthorizedResult[1]
+      Setting HTTP status code 401.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 401 0 - 6.6621ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 51
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 19.2155ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 13.991ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 13.9943ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 13.9965ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 16.286ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 16.2884ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 16.2959ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 400 application/json 22.6687ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 135 application/json 22.6873ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 22.6142ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/gateway/payments/api/v1/payments - application/json 73
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request POST http://127.0.0.1:5202/api/v1/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request POST http://127.0.0.1:5202/api/v1/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 2.124ms - 201
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 2.161ms - 201
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 201.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/gateway/payments/api/v1/payments - 201 210 application/json 3.1986ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.5107ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.5372ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 135 application/json 0.8020ms
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.597ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6175ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6435ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6661ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 584 application/json 0.9403ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 0.9662ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/logout - application/json 2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[11]
+      AuthenticationScheme: portal signed out.
+info: Microsoft.AspNetCore.Http.Result.NoContentResult[1]
+      Setting HTTP status code 204.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/logout - 204 - - 1.0346ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 0.6236ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 0.4207ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 0.4060ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 0.2595ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 50
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 0.6372ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6335ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6682ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6428ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6723ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 199 application/json 0.9699ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 135 application/json 0.9720ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/logout - application/json 2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[11]
+      AuthenticationScheme: portal signed out.
+info: Microsoft.AspNetCore.Http.Result.NoContentResult[1]
+      Setting HTTP status code 204.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/logout - 204 - - 0.4517ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 0.4066ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 0.2753ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 0.2180ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 0.1397ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 51
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 0.3751ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6488ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6815ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 135 application/json 0.9717ms
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.7504ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.7478ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.7788ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.7799ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 584 application/json 1.0466ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 1.0220ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 0.4268ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 0.1858ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 0.1750ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 0.2597ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 51
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 0.4388ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 1.0932ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 1.1517ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 1.1457ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 1.1912ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 785 application/json 1.8191ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 135 application/json 1.8347ms
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 1.6187ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 1.6735ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 2.1188ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/health - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET /health'
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType0`2' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET /health'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/health - 200 - application/json;+charset=utf-8 1.3517ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 3.1305ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 0.3451ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 0.3177ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 0.8339ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 51
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 1.5662ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 11.6481ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 11.6415ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 11.6607ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 11.729ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 11.7367ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 11.7201ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 12.8319ms
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 785 application/json 13.1254ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 135 application/json 12.9961ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/gateway/payments/api/v1/payments - application/json 74
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request POST http://127.0.0.1:5202/api/v1/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request POST http://127.0.0.1:5202/api/v1/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 2.2799ms - 201
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 2.5498ms - 201
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 201.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/gateway/payments/api/v1/payments - 201 211 application/json 3.0578ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.4379ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.4899ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.4747ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.5007ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 139 application/json 0.7578ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 970 application/json 0.7667ms
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 1.1102ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 1.1488ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 1.3898ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/logout - application/json 2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[11]
+      AuthenticationScheme: portal signed out.
+info: Microsoft.AspNetCore.Http.Result.NoContentResult[1]
+      Setting HTTP status code 204.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/logout - 204 - - 0.2606ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 0.3646ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 0.1947ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 0.2002ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 0.2355ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 51
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 0.3532ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5201/api/v1/accounts/100000001/usage
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6064ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6361ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6064ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.6408ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/usage/api/v1/accounts/100000001/usage - 200 455 application/json 0.9087ms
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.6995ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.7241ms - 200
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 139 application/json 0.9546ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 970 application/json 0.9412ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/logout - application/json 2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[11]
+      AuthenticationScheme: portal signed out.
+info: Microsoft.AspNetCore.Http.Result.NoContentResult[1]
+      Setting HTTP status code 204.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /logout'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/logout - 204 - - 0.2171ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/ - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/index.html'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/index.html'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/index.html - 200 4893 text/html 0.3332ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/style.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/app.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/style.css'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/style.css'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/app.js'. Physical path: '/Users/husni/Documents/ChatGPT/4th sem husni SOC/src/Water.Portal/wwwroot/app.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/style.css - 200 5424 text/css 0.2260ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/app.js - 200 5378 text/javascript 0.2280ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/session - application/json -
+info: Microsoft.AspNetCore.Authorization.DefaultAuthorizationService[2]
+      Authorization failed. These requirements were not met:
+      DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[12]
+      AuthenticationScheme: portal was challenged.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/session - 401 0 - 0.1164ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:5200/session - application/json 50
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler[10]
+      AuthenticationScheme: portal signed in.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.OkObjectResult[3]
+      Writing value of type '<>f__AnonymousType1`3' as Json.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: POST /session'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:5200/session - 200 - application/json;+charset=utf-8 0.3665ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - application/json -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - application/json -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.LogicalHandler[100]
+      Start processing HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/balance
+info: System.Net.Http.HttpClient.services.ClientHandler[100]
+      Sending HTTP request GET http://127.0.0.1:5202/api/v1/accounts/100000001/payments
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.5566ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.589ms - 200
+info: System.Net.Http.HttpClient.services.ClientHandler[101]
+      Received HTTP response headers after 0.572ms - 200
+info: System.Net.Http.HttpClient.services.LogicalHandler[101]
+      End processing HTTP request after 0.5953ms - 200
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Http.Result.ContentResult[1]
+      Setting HTTP status code 200.
+info: Microsoft.AspNetCore.Http.Result.ContentResult[2]
+      Write content with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'HTTP: GET, POST /gateway/{service}/{**path}'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/payments - 200 400 application/json 0.8647ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5200/gateway/payments/api/v1/accounts/100000001/balance - 200 139 application/json 0.8713ms

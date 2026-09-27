@@ -1,0 +1,10 @@
+flowchart TB
+ Customer[Customer browser] -->|Cookie session| Portal[ASP.NET Core portal]
+ Operator[Meter operator browser] --> Portal
+ Portal -->|Bearer HTTP JSON| Usage[Usage API 5101]
+ Portal -->|Bearer HTTP JSON| Payments[Payment API 5102]
+ Partner[Partner .NET desktop] -->|Bearer HTTP JSON| Payments
+ Usage --> UsageDB[(Usage SQLite)]
+ Payments --> PayDB[(Payments SQLite)]
+ Contracts[Water.Contracts library] -.-> Payments
+ Contracts -.-> Partner

@@ -1,0 +1,17 @@
+PASS Exact cents
+PASS Smallest payment
+PASS Reject zero
+PASS Reject negative
+PASS Reject fractional cent
+PASS Reject maximum overflow
+PASS Accept reference
+PASS Reject empty reference
+PASS Reject short reference
+PASS Reject unsafe reference
+PASS Accept cumulative reading
+PASS Accept zero consumption
+PASS Reject decreasing reading
+PASS Reject old reading
+PASS Reject future reading
+PASS Reject excess meter precision
+RESULT 16/16 passed

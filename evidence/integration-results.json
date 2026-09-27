@@ -1,0 +1,137 @@
+{
+  "tests": [
+    {
+      "name": "Unauthenticated denied",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Customer reads own balance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-account balance denied",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-account usage denied",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Partner cannot read personal usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Partner can lookup balance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Missing account returns 404",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Valid payment creates receipt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Retry returns same receipt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Balance reduced once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reference payload conflict",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Zero amount rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Fractional cents rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Overpayment rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Operator payment denied",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Payment against another account denied",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Concurrent overpayment prevented",
+      "passed": true,
+      "detail": "[201, 409]"
+    },
+    {
+      "name": "Concurrent settlement leaves zero balance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Concurrent duplicate stored once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Partner sees only its own receipts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Customer cannot submit readings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Decreasing meter rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Future meter timestamp rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Operator reading accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Consumption refresh reflects new reading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Duplicate timestamp rejected",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "passed": 26,
+  "total": 26,
+  "recordedAt": "2026-09-26T13:53:08.178583+00:00"
+}

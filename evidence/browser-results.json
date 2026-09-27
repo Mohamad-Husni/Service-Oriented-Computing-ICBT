@@ -1,0 +1,47 @@
+{
+  "tests": [
+    {
+      "name": "Invalid login rejected",
+      "passed": true
+    },
+    {
+      "name": "Customer dashboard loads",
+      "passed": true
+    },
+    {
+      "name": "Browser payment produces receipt",
+      "passed": true
+    },
+    {
+      "name": "No horizontal overflow at 768",
+      "passed": true
+    },
+    {
+      "name": "No horizontal overflow at 390",
+      "passed": true
+    },
+    {
+      "name": "Partner lookup visible",
+      "passed": true
+    },
+    {
+      "name": "Partner usage hidden",
+      "passed": true
+    },
+    {
+      "name": "Operator meter form visible",
+      "passed": true
+    },
+    {
+      "name": "Operator payment form hidden",
+      "passed": true
+    },
+    {
+      "name": "No browser exceptions",
+      "passed": true
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "errors": []
+}

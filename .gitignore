@@ -1,0 +1,13 @@
+.tools/
+**/bin/
+**/obj/
+.data/
+.env
+__pycache__/
+tmp/
+research/
+.DS_Store
+node_modules/
+*.db
+*.db-shm
+*.db-wal

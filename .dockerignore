@@ -1,0 +1,9 @@
+.tools
+.git
+.data
+**/bin
+**/obj
+research
+evidence
+output
+tmp
